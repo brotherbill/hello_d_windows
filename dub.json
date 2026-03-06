@@ -5,7 +5,7 @@
 	"copyright": "Copyright © 2026, broth",
 	"description": "A minimal D application.",
 	"license": "proprietary",
-	"name": "c00_starter_windows"
+	"name": "c00_hello_d_windows"
 	,
 	"configurations": [
 		{
