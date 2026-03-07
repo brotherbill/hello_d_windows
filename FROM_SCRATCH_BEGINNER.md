@@ -63,7 +63,7 @@ Welcome! This guide will walk you through setting up your computer for D program
    > *Note:* You do not need to launch Visual Studio itself—just close the installer window when finished.
    > *Note:* Installing Visual Studio may take several minutes. Please be patient while the installation completes.
 3. **Install the D language extension in VS Code:**  
-   Open VS Code. Press Ctrl+Shift+X to open Extensions. Search for `code-d` by WebFreak and click Install.  
+   Open VS Code. Press Ctrl+Shift+X to open Extensions. Search for `code-d` by WebFreak and click Install.  Close VS Code.
    > *Beginner Tip:* Extensions add new features to VS Code. `code-d` helps you write and debug D code easily.
    > *Beginner Tip:* After opening VS Code, you can optionally make it full screen (click the square icon in the top right or press F11) for a better editing experience.
    > *Beginner Tip:* In the Extensions view, type `code-d` into the textbox just below the "EXTENSIONS: MARKETPLACE" label. The first item in the list should be "D Programming Language (code-d)". Click Install next to it.
