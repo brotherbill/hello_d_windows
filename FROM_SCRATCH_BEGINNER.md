@@ -39,6 +39,12 @@ Welcome! This guide will walk you through setting up your computer for D program
 
 1. **Download and install Visual Studio Code:**  
    Go to <https://code.visualstudio.com/> and click the download button. Run the installer and accept all the default options.  
+   
+   After installing VS Code, open it and install the "C/C++" extension by Microsoft:
+   - Press Ctrl+Shift+X to open Extensions.
+   - In the search box, type `C/C++`.
+   - Find the extension by Microsoft and click Install.
+   
    > *Beginner Tip:* During installation, you may check "Create a desktop icon" to make it easier to open VS Code later.  
    > *Beginner Tip:* On completing the VS Code Setup wizard, you may uncheck "Launch Visual Studio Code"—it isn't needed for the next step.  
    > *Beginner Tip:* Visual Studio Code (VS Code) is a free code editor. It's safe to install and is used by millions of developers.
