@@ -1,7 +1,9 @@
 param(
-    [Parameter(Mandatory)]
+    [Parameter(Mandatory, Position=0)]
+    [Alias("Name")]
     [string]$name,
-    [Parameter(Mandatory)]
+    [Parameter(Mandatory, Position=1)]
+    [Alias("Description")]
     [string]$description
 )
 $repoUrl = 'https://github.com/brotherbill/hello_d_windows'
