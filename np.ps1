@@ -33,4 +33,4 @@ if (Test-Path $launchFile) {
 Write-Host "Project '$name' created and customized."
 
 # Sample usage:
-# powershell -File .\np.ps1 -name my_new_project -description "My new D project for Windows"
+# np -name my_new_project -description "My new D project for Windows"
