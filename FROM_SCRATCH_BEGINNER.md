@@ -38,15 +38,16 @@ When downloading the D installer, your browser or Windows may warn you that the 
 Welcome! This guide will walk you through setting up your computer for D programming, step by step. No prior experience is required—just follow along and you'll be ready to write and debug D code in no time.
 
 1. **Download and install Visual Studio Code:**  
-   Go to <https://code.visualstudio.com/> and click the download button. Run the installer and accept all the default options.  
+   Visit <https://code.visualstudio.com/>, click the download button, and run the installer. Accept the default options. Optionally, select "Create a desktop icon" to easily open VS Code by double-clicking it.
    
    After installing VS Code, open it and install the "C/C++" extension by Microsoft:
    - Press Ctrl+Shift+X to open Extensions.
    - In the search box, type `C/C++`.
    - Find the extension by Microsoft and click Install.
+   - If prompted to try a pre-release version, choose "No"—the stable version is recommended and fully supported.
 
 When finished, close VS Code.
-   
+
    > *Beginner Tip:* During installation, you may check "Create a desktop icon" to make it easier to open VS Code later.  
    > *Beginner Tip:* On completing the VS Code Setup wizard, you may uncheck "Launch Visual Studio Code"—it isn't needed for the next step.  
    > *Beginner Tip:* Visual Studio Code (VS Code) is a free code editor. It's safe to install and is used by millions of developers.
@@ -72,33 +73,48 @@ When finished, close VS Code.
    > *Note:* Installing Visual Studio may take several minutes. Please be patient while the installation completes.
 3. **Install the D language extension in VS Code:**  
    Open VS Code. Press Ctrl+Shift+X to open Extensions. Search for `code-d` by WebFreak and click Install.  Close VS Code.
-   > *Beginner Tip:* Extensions add new features to VS Code. `code-d` helps you write and debug D code easily.
-   > *Beginner Tip:* After opening VS Code, you can optionally make it full screen (click the square icon in the top right or press F11) for a better editing experience.
-   > *Beginner Tip:* In the Extensions view, type `code-d` into the textbox just below the "EXTENSIONS: MARKETPLACE" label. The first item in the list should be "D Programming Language (code-d)". Click Install next to it.
-   > *Beginner Tip:* If prompted, click the "Trust Publishers & Install" button to continue installing the extension.
-   > **Note:** You may see a "Reinstall serve-d" notification in VS Code. It is not needed—just close the notification.
+   >     *Beginner Tip:* Extensions add new features to VS Code. `code-d` helps you write and debug D code easily.
+   >     *Beginner Tip:* After opening VS Code, you can optionally make it full screen (click the square icon in the top right or press F11) for a better editing experience.
+   >     *Beginner Tip:* In the Extensions view, type `code-d` into the textbox just below the "EXTENSIONS: MARKETPLACE" label. The first item in the list should be "D Programming Language (code-d)". Click Install next to it.
+   >     *Beginner Tip:* If prompted, click the "Trust Publishers & Install" button to continue installing the extension.
+   >     **Note:** You may see a "Reinstall serve-d" notification in VS Code. It is not needed—just close the notification.  If prompted to change compilers, just close the notification.
 
 4. **Choose where to keep your D projects:**  
    In File Explorer, create the folder path where you want to store your D projects (for example, `C:\dev\d`).  Close File Explorer.
    > *Beginner Tip:* To create a new folder, right-click and choose "New > Folder."
+
 5. **Open the VS Code Terminal:**  
-   In VS Code, click "Terminal" in the top menu."  
+   In VS Code, select `Terminal > New Terminal` in the top menu."  
+
    > *Beginner Tip:* The terminal is where you type commands for your computer to run.
+
 6. **Download the project template:**  
-   In the terminal, type:
+   In the terminal, type: `git --version`
+   If you get error messages, then install Git from <https://git-scm.com>
+   On Completed page, uncheck: View Release Notes, then click Finish. Close browser.
+   Run: `cd C:\dev\d`  This ensure that this folder will be the parent of our new project.
+
    `git clone https://github.com/brotherbill/hello_d_windows`
    Press Enter. This will create a folder called `hello_d_windows` in your chosen location.  
-   > *Beginner Tip:* If you see a message about git not being found, you may need to install Git from <https://git-scm.com/>.
-   **Do not edit or delete `hello_d_windows`—it is needed for new project creation.**
+
+   Run: `cd ./hello_d_windows`  Open Folder to `C:\dev\d\hello_d_windows\`
+
+   > **Do not edit or delete `hello_d_windows`—it is needed for new project creation.**
+
 7. **Set up the project creation script:**  
-   In the terminal, type:
-   `setup_new_d_project_global.ps1`
+   In the terminal, run:
+   `Get-ExecutionPolicy -List`  
+   If CurrentUser is `Undefined`, run: (Answer: [Y] for Yes)
+        `Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned`
+
+   `.\setup_new_d_project_global`  (It will add the .ps1 for you)
    Press Enter. This makes the `new_d_project` script available everywhere on your computer.  
-   > *Beginner Tip:* If you get a security warning, right-click the script, choose "Run with PowerShell," or check your PowerShell execution policy.
+
 8. **Create your first D project:**  
    In the terminal, type:
    `new_d_project -name my_next_d_project -description "description of my next d project"`
    Press Enter. This will create a new folder for your project.
+
 9. **Open and debug your project:**  
    In VS Code, open the new project folder. Open `source/app.d`. Click the margin next to line 5 to set a breakpoint (a red dot will appear). Press F5 to start debugging. When the program stops at the breakpoint, press F10 to step and print "Greetings, D!" to the Terminal. Press F5 again to finish running the program.  
    > *Beginner Tip:* Breakpoints let you pause your program and see what it’s doing. F5 starts or continues, F10 steps one line.

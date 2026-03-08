@@ -4,6 +4,7 @@ This guide is for experienced developers setting up D projects on Windows using 
 
 ## Common Windows Issues
 - No F5 debugging with plain `dub init` projects; use this template for full VS Code debug support.
+- Garbled Unicode in VS Code Terminal: Many Unicode characters outside the standard ASCII range may not display correctly in the VS Code Terminal on Windows. This can cause output to look garbled or unreadable when your D program prints non-ASCII characters.
 - Console output is unbuffered (`write()` flushes immediately).
 - `std.random` may not link on Windows; a workaround will be provided in the lesson on random numbers.
 - Dub/DMD may require cleaning (`clean` task) to pick up config/dependency changes.

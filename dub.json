@@ -1,17 +1,13 @@
 {
 	"authors": [
-		"broth"
+		"dlang.school"
 	],
-	"copyright": "Copyright © 2026, broth",
+	"copyright": "Copyright © 2026",
 	"description": "A minimal D application.",
 	"license": "proprietary",
-	"name": "c00_hello_d_windows"
-	,
-	"configurations": [
-		{
-			"name": "application",
-			"targetType": "executable",
-			"dflags": ["-g", "-debug"]
-		}
+	"name": "c00_hello_d_windows",
+	"targetType": "executable",
+	"sourcePaths": [
+		"source"
 	]
 }

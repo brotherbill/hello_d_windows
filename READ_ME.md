@@ -40,3 +40,5 @@ To create a new D project:
    
 
 For full details and troubleshooting, see FROM_SCRATCH.md.
+  
+ - **Garbled Unicode in VS Code Terminal:** Many Unicode characters outside the standard ASCII range may not display correctly in the VS Code Terminal on Windows. This can cause output to look garbled or unreadable when your D program prints non-ASCII characters.
